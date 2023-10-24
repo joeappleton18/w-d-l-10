@@ -1,9 +1,12 @@
 const express = require('express');
 const ejs = require('ejs');
-const client = require('mysql');
-const mysql = require('mysql');
 
-require('dotenv').config();
+const PORT = 8000;
+const DB_HOST = 'localhost';
+const DB_USER = 'root';
+const DB_NAME = 'university_web';
+const DB_PASSWORD = '';
+const DB_PORT = 3306;
 
 const app = express();
 
@@ -35,7 +38,7 @@ app.post('/students/edit/:id', async (req, res) => {
 });
 
 
-app.listen(process.env.PORT, () => {
-	console.log(`Example app listening at http://localhost:${process.env.PORT}`);
+app.listen(PORT, () => {
+	console.log(`Example app listening at http://localhost:${PORT}`);
 });
 
