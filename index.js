@@ -16,7 +16,7 @@ app.use(express.static('public'));
 app.get('/', async (req, res) => {
 
 	res.render('index', {
-		studentCount: 10,
+		studentCount: 6,
 		academicCount: 20,
 		departmentCount: 20,
 		courseCount: 15
