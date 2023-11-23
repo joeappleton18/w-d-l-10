@@ -29,13 +29,15 @@ app.get('/students', async (req, res) => {
 
 });
 
+
+app.get('/students/view/:id', async (req, res) => {
+	res.render('student_view', { student: [] });
+});
+
 app.get('/students/edit/:id', async (req, res) => {
 	res.render('student_edit', { student: {}, courses: [], message: '' });
 });
 
-app.post('/students/edit/:id', async (req, res) => {
-
-});
 
 
 app.listen(PORT, () => {
